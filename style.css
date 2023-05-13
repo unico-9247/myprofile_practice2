@@ -19,7 +19,7 @@ h3 {
   color: #000;
 }
 
-li, p {
+li, p, span {
   font-size: 18px;
   color: #000;
 }
@@ -73,6 +73,7 @@ nav a:visited {
   height: 400px;
   max-width: 100%;
   margin-top: 60px;
+  object-fit: cover;
 }
 
 /* Aboutのセクション */
