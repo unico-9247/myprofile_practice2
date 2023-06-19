@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap" rel="stylesheet">
+  <!-- slickの読み込み -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -19,20 +22,30 @@
   <!-- ナビゲーション -->
   <nav>
     <div class="home">
-      <h1><a href="index.html">My&nbsp;Profile</a></h1>
+      <h1><a class="nav" href="index.html">My&nbsp;Profile</a></h1>
     </div>
     <ul class="menu">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#works">Works</a></li>
+      <li><a class="nav" href="index.html#about">About</a></li>
+      <li><a class="nav" href="index.html#works">Works</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-    <!-- メイン写真 -->
-    <div>
-      <img class="main-photo" src="images/main.png" alt="Canonのカメラ">
-    </div>
+    <!-- メイン写真のカルーセル -->
+    <section id="carousel-section">
+      <div class="carousel">
+        <div>
+          <img src="images/main.png" alt="Canonのカメラ">
+        </div>
+        <div>
+          <img src="images/main2.png" alt="カメラ道具一式">
+        </div>
+        <div>
+          <img src="images/main3.png" alt="海辺を背景に設置されたカメラ">
+        </div>
+      </div>
+    </section>
 
     <!-- Aboutのセクション -->
     <section id="about">
@@ -58,16 +71,50 @@
       <h2>Works</h2>
       <div class="works-flex">
         <div class="works-div">
-          <img src="images/works1.png" alt="新潟県での日本海の風景">
+          <img  class="modal-open" src="images/works1.png" alt="新潟県での日本海の風景">
           <p>新潟に訪れた際に、日本海の雄大さに魅了されて撮影した1枚</p>
         </div>
         <div class="works-div">
-          <img src="images/works2.png" alt="冠雪した御嶽山">
+          <img class="modal-open" src="images/works2.png" alt="冠雪した御嶽山">
           <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
         </div>
         <div class="works-div">
-          <img src="images/works3.png" alt="京都の街並み">
+          <img class="modal-open" src="images/works3.png" alt="京都の街並み">
           <p>京都で撮影した、明け方の古き良き日本の街並み</p>
+        </div>
+      </div>
+
+      <!-- モーダル本体1 -->
+      <div class="modal-container">
+        <div class="modal-body">
+          <!-- 閉じるボタン -->
+          <div class="modal-close">×</div>
+          <!-- モーダル内のコンテンツ -->
+          <div class="modal-content">
+            <img src="images/works1.png" alt="新潟県での日本海の風景">
+          </div>
+        </div>
+      </div>
+      <!-- モーダル本体2 -->
+      <div class="modal-container">
+        <div class="modal-body">
+          <!-- 閉じるボタン -->
+          <div class="modal-close">×</div>
+          <!-- モーダル内のコンテンツ -->
+          <div class="modal-content">
+            <img src="images/works2.png" alt="冠雪した御嶽山">
+          </div>
+        </div>
+      </div>
+      <!-- モーダル本体3 -->
+      <div class="modal-container">
+        <div class="modal-body">
+          <!-- 閉じるボタン -->
+          <div class="modal-close">×</div>
+          <!-- モーダル内のコンテンツ -->
+          <div class="modal-content">
+            <img src="images/works3.png" alt="京都の街並み">
+          </div>
         </div>
       </div>
     </section>
@@ -81,6 +128,14 @@
 </footer>
 
 </div>
+
+<!-- TOPに戻るボタンを作成 -->
+<a id="back-btn" href="#">TOP</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- slickの読み込み -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
