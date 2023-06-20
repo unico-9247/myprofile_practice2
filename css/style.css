@@ -68,12 +68,17 @@ nav a:visited {
   list-style: none;
 }
 
-/* メイン写真 */
-.main-photo {
-  height: 400px;
-  max-width: 100%;
-  margin-top: 60px;
-  object-fit: cover;
+/* メイン写真 slickに置き換えたため使用しなくなった */
+/* .main-photo { */
+  /* height: 400px; */
+  /* max-width: 100%; */
+  /* margin-top: 60px; */
+  /* object-fit: cover; */
+/* } */
+
+/* メイン写真 slick　不要なパディングを削除 */
+.carousel {
+  padding: 0;
 }
 
 /* Aboutのセクション */
